@@ -1,0 +1,190 @@
+
+@font-face{
+	font-family: Raleway;
+	src:url(Raleway-Regular.ttf);
+}
+html, body{
+	height:100%;
+}
+#map{
+	height:100%;
+	width:100%;
+	background-color: #CCC;
+}
+.container-fluid{
+	height:100%;
+}
+#getLocation{
+	height:50px;
+	width:50px;
+	position: absolute;
+	background-color: black;
+	top:10px;
+	left:10px;
+}
+#calendar{
+	position: absolute;
+	bottom:0px;
+	right:150px;
+
+}
+
+
+
+.btn {
+    border-radius: 0;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.btn-default {
+    border: 1px solid #4CAF50;
+    color: #4CAF50;
+    background-color: transparent;
+}
+
+.danger{
+   border: 1px solid #D32F2F;
+    color: red;
+    background-color: transparent;
+
+
+}
+
+.btn-default:hover,
+.btn-default:focus {
+    border: 1px solid #4CAF50;
+    outline: 0;
+    color: #fff;
+    background-color: #009688;
+}
+.danger:hover,
+.danger:focus {
+    border: 1px solid red;
+    outline: 0;
+    color: #FFF;
+    background-color: #D32F2F;
+}
+
+.verify{
+	
+	background-image: url(assets/veri.png);
+
+}
+.hide{
+	visibility: none;
+}
+.show{
+	visibility: inherit;
+}
+#payContainer{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	display: none;
+	font-size: 16px;
+}
+#aBordo{
+	position: relative;
+	left:0px;
+	right:0px;
+	margin:auto;
+	width:400px;
+	top:0px;
+
+}
+#payInfo{
+	position:absolute;
+		top:0px;
+		left:0px;
+		right:0px;
+		bottom:0px;
+		margin:auto;
+		background-color: rgba(250, 250, 250,0.8);
+		width:500px;
+		height:500px;
+		border-radius: 10px;
+
+}
+#payUser{
+	color:green;
+	left:0px;
+	right:0px;
+	margin:auto;
+	position:absolute;
+	width:263px;
+	padding-top: 70px;
+
+
+
+}
+
+#payAhorro{
+
+	left:0px;
+	right:0px;
+	margin:auto;
+	position:absolute;
+	width:228px;
+	padding-top: 40px;
+}
+#payTotal{
+
+
+
+	color:red;
+	left:0px;
+	right:0px;
+	margin:auto;
+	position:absolute;
+	width:194px;
+	padding-top: 10px;
+
+}
+
+
+p{
+	font-size: 20px;
+	font-family: Raleway;
+}
+.profileImg{
+	padding-top:7px;
+}
+img{
+	/*position: absolute;
+	left:0px;*/
+
+}
+.dText{
+	position: relative;
+    text-align: left;
+    width: 170px;
+    float: right;
+    right: -8px;
+}
+.extra{
+	text-align: right;
+	position: relative;
+	top:10px;
+}
+.scrollable{
+	 position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    overflow: auto;
+}
+
+.cards{
+-webkit-box-shadow: 4px 1px 14px -1px rgba(0,0,0,0.88);
+-moz-box-shadow: 4px 1px 14px -1px rgba(0,0,0,0.88);
+box-shadow: 4px 1px 14px -1px rgba(0,0,0,0.88);
+	
+}

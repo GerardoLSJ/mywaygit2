@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyWay</title>
+	<meta charset = "utf-8">
+
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/stylesheet.css">
+	<link href="css/signin.css" rel="stylesheet">
+
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+	 <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
+	<script src="js/maps.js"></script>
+
+	 <link rel="stylesheet" type="text/css" href="css/DateTimePicker.css" />
+ 	<script type="text/javascript" src="js/DateTimePicker.js"></script>
+
+
+
+
+
+
+	
+
+
+
+</head>
+<body>
+	<div class="container-fluid">
+		 <div id="map"></div>
+		 <!--<div id="getLocation" onclick="getLocation()"></div>-->
+		 <div style="overflow:hidden;" id="calendar">
+		 	 <p>Agendar viaje: </p>
+ 			<input type="text" data-field="datetime" id="calendarContainer" readonly>
+ 			 <div id="dtBox"></div>
+		</div>
+
+
+
+
+		<div id = "payContainer">
+			<div id="payInfo">
+				<div id="aBordo"><h3>Personas a bordo:</h3> 
+				<a href="https://www.facebook.com/andre.escajeda"><img class="right floated mini ui image profileImg" src="assets/09.png" style="max-width: 80px; max-height: 80px;"></a> &nbsp; André  <br>
+
+				<a href="https://instagram.com/paumeaow/"><img class="right floated mini ui image profileImg" src="assets/10.png" style="max-width: 80px;
+	max-height: 80px;"></a> &nbsp; Paulina <br>
+
+
+				<a href="https://twitter.com/seebas_silva"><img class="right floated mini ui image profileImg" src="assets/11.png" style="max-width: 80px;
+	max-height: 80px;"></a> &nbsp; Sebastián <br>
+
+				<a href = "https://www.linkedin.com/"><img class="right floated mini ui image profileImg" src="assets/12.png" style="max-width: 80px;
+	max-height: 80px;"></a> &nbsp; Ana <br>
+
+				</div>
+				<div id="payTotal"><p> Costo del viaje: $400 </p></div>
+				<div id="payAhorro"><p> Ahorro por usuario: $270</p></div>
+				<div id="payUser"><p>Costo total por usuario: $130</p></div>
+			</div>
+		</div>
+
+<!------UI CARDS---- -->
+<div class="ui cards" style="width:304px; height:100%; overflow:hidden; position:absolute; top:0px; background-color:#fff; display:none; " id = "contactos">
+	<!--      asdasdasdasdsadasdsadsdsdsdsdsdsadasdasdsdasndbsahdgshfgasdgashjdgakhjsgdhjasgd    -->
+<div class = "scrollable">
+		<br>
+	  <div class="card">
+	    <div class="content">
+	      <img class="right floated mini ui image" src="assets/04.png" style="max-width: 80px;
+	max-height: 80px;" href="https://instagram.com/paumeaow/">
+			<div class = "dText">
+		      <div class="header">
+		        Paulina 
+		      </div>
+		      <div class="meta">
+		       Amiga de Jessica Herrera <br> <b>A 150m</b>
+
+		      </div>
+		      <div class="description">
+		        ¿Nos vamos juntos?
+		      </div>
+	      </div>
+	    </div>
+	    <div class="extra content">
+	      <div class="ui two buttons">
+	        <div class="btn btn-default goWith">Ir con ella</div>
+	        <div class="btn btn-default danger">Descartar</div>
+	      </div>
+	    </div>
+	  </div>
+	 <br><hr>
+
+
+
+
+	  <div class="card">
+	    <div class="content">
+	      <img class="right floated mini ui image" src="assets/03.png" style="max-width: 80px; max-height: 80px;" href="https://twitter.com/seebas_silva">
+	      <div class = "dText">
+		      <div class="header">
+		        Sebastián
+		      </div>
+		      <div class="meta">
+		       Amigo de Angel Herrera <br> <b>A 250m</b>
+
+		      </div>
+		      <div class="description">
+		        ¿Jalas?
+		      </div>
+		    </div>
+	    </div>
+	    <div class="extra content">
+	      <div class="ui two buttons">
+	        <div class="btn btn-default ">Ir con él</div>
+	        <div class="btn btn-default danger discard">Descartar</div>
+	      </div>
+	    </div>
+	  </div>
+	  <br><hr>
+
+	<!--      asdasdasdasdsadasdsadsdsdsdsdsdsadasdasdsdasndbsahdgshfgasdgashjdgakhjsgdhjasgd    -->
+
+	  <div class="card">
+	    <div class="content ">
+	      <img class="right floated mini ui image" src="assets/01.png" style="max-width: 80px; max-height: 80px;" href="https://www.facebook.com/andre.escajeda">
+	      <div class = "dText">
+		      <div class="header">
+		        Andre Escajeda
+		      </div>
+		      <div class="meta">
+		        Amigo de Sebas Silva <br> <b>A 100m</b>
+		      </div>
+		      <div class="description verify">
+		        Quiere irse contigo 
+		      </div>
+		    </div>
+	    </div>
+	    <div class="extra content">
+	      <div class="ui two buttons">
+	      <div class="btn btn-default goWith">Ir con él</div>
+	        <div id="danger" class="btn btn-default danger discard">Descartar</div>
+
+							<script>
+							$( ".btn" ).click(function() {
+							  $( this ).toggleClass( ".hide" );
+							});
+							</script>
+	      </div>
+	    </div>
+	  </div>	  <br><hr>
+
+
+	   <!--      asdasdasdasdsadasdsadsdsdsdsdsdsadasdasdsdasndbsahdgshfgasdgashjdgakhjsgdhjasgd    -->
+	  <div class="card">
+	    <div class="content">
+	      <img class="right floated mini ui image" src="assets/06.png" style="max-width: 80px; max-height: 80px;">
+	      <div class = "dText">
+		      <div class="header">
+		        Ana 
+		      </div>
+		      <div class="meta">
+		       Amiga de Aranza Garcia <br> <b>A 150m</b>
+
+		      </div>
+		      <div class="description">
+		        ¿Nos vamos juntos?
+		      </div>
+		    </div>
+	    </div>
+	    <div class="extra content">
+	      <div class="ui two buttons">
+	        <div class="btn btn-default goWith">Ir con ella</div>
+	        <div class="btn btn-default danger discard">Descartar</div>
+	      </div>
+	    </div>
+	  </div>
+	  <br><hr>
+
+
+	<!--      asdasdasdasdsadasdsadsdsdsdsdsdsadasdasdsdasndbsahdgshfgasdgashjdgakhjsgdhjasgd    -->
+
+	  <!--      asdasdasdasdsadasdsadsdsdsdsdsdsadasdasdsdasndbsahdgshfgasdgashjdgakhjsgdhjasgd    -->
+	  <div class="card">
+	    <div class="content">
+	      <img class="right floated mini ui image" src="assets/02.png" style="max-width: 80px; max-height: 80px;">
+	      <div class = "dText">
+		      <div class="header">
+		        Gerry 
+		      </div>
+		      <div class="meta">
+		       Amigo de Raul Perez <br> <b>A 300m</b>
+
+		      </div>
+		      <div class="description">
+		        Vamonos juntos
+		      </div>
+		    </div>
+	    </div>
+	    <div class="extra content">
+	      <div class="ui two buttons">
+	        <div class="btn btn-default goWith">Ir con él</div>
+	        <div class="btn btn-default danger discard">Descartar</div>
+	      </div>
+	    </div>
+	  </div>
+
+	  <br><hr>
+
+	<!--      asdasdasdasdsadasdsadsdsdsdsdsdsadasdasdsdasndbsahdgshfgasdgashjdgakhjsgdhjasgd    -->
+
+	  
+
+</div>
+<!--      asdasdasdasdsadasdsadsdsdsdsdsdsadasdasdsdasndbsahdgshfgasdgashjdgakhjsgdhjasgd    -->
+</div>
+
+
+
+
+	</div>
+</body>
+<script type="text/javascript">
+	 $(document).ready(function()
+ {
+   
+     $("#dtBox").DateTimePicker();
+   
+ });
+</script>
+</html>
